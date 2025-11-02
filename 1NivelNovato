@@ -1,0 +1,45 @@
+#include <stdio.h>
+
+int main (){
+
+    int i;
+    int escolhadousuario;
+
+    printf("Escolha uma das opções de peça abaixo:\n");
+    printf("1. Torre para a direita\n");
+    printf("2. Bispo para a diagonal\n");
+    printf("3. Torre para a esquerda\n");
+    printf("Digite sua escolha: ");
+    scanf("%d", &escolhadousuario);
+
+    switch (escolhadousuario){
+    case 1:
+        printf("A Torre se moverá 5 casas para a direita:\n");
+        for(i = 0; i < 5; i++){
+        printf("Direita\n");
+        }
+        break;
+    case 2:
+        i = 0;
+        printf("A Bispo se moverá 5 casas na diagonal para a direita:\n");
+        while (i < 5){
+        printf("Cima, Direita\n");
+        i++;
+        }
+        break;
+    case 3:
+        printf("A rainha se moverá 8 casas na diagonal para a esquerda:\n");
+        i = 0;
+        do{
+            printf("Esquerda\n");
+            i++;
+        }while (i < 8);
+        break;
+
+    default:
+        printf("Escolha uma opção válida!\n");
+        break;
+    }
+
+    return 0;
+}
