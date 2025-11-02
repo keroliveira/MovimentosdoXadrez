@@ -5,6 +5,7 @@ int main (){
     int i;
     int escolhadousuario;
 
+    //Menu escolha do usuário
     printf("Escolha uma das opções de peça abaixo:\n");
     printf("1. Torre para a direita\n");
     printf("2. Bispo para a diagonal\n");
@@ -14,12 +15,14 @@ int main (){
 
     switch (escolhadousuario){
     case 1:
+    // Movimento da Torre com For
         printf("A Torre se moverá 5 casas para a direita:\n");
         for(i = 0; i < 5; i++){
         printf("Direita\n");
         }
         break;
     case 2:
+    // Movimento do Bispo com While
         i = 0;
         printf("A Bispo se moverá 5 casas na diagonal para a direita:\n");
         while (i < 5){
@@ -28,15 +31,16 @@ int main (){
         }
         break;
     case 3:
-        printf("A rainha se moverá 8 casas na diagonal para a esquerda:\n");
+    // Movimento da Rainha com Do-while
+        printf("A Rainha se moverá 8 casas na diagonal para a esquerda:\n");
         i = 0;
         do{
             printf("Esquerda\n");
             i++;
         }while (i < 8);
         break;
-
     default:
+    // Caso default
         printf("Escolha uma opção válida!\n");
         break;
     }
